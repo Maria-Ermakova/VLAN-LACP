@@ -1,0 +1,21 @@
+#testServer2
+
+network:
+    version: 2
+    ethernets:
+        enp0s3:
+            dhcp4: true
+        #В разделе ethernets добавляем порт, на котором будем настраивать VLAN
+        enp0s8: {}
+    #Настройка VLAN
+    vlans:
+        #Имя VLANа
+        vlan2:
+          #Указываем номер VLAN`а
+          id: 2
+          #Имя физического интерфейса
+          link: enp0s8
+          #Отключение DHCP-клиента
+          dhcp4: no
+          #Указываем ip-адрес
+          addresses: [10.10.10.1/24]
