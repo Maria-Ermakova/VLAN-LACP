@@ -1,5 +1,5 @@
 #testClient1
-#testClient2
+
 VLAN=yes
 #Тип интерфейса - VLAN
 TYPE=Vlan
